@@ -2,11 +2,11 @@
 
 ## Configuration
 
-Adjust the following files for a new project:
-
-- _/config/deploy.rb_ 
-- _/config/deploy/*.rb_
-- _mkdocs.yml_
+1. Clone: git clone git@github.com:opoloo/middleman-template.git `<projectname>`
+2. Adjust the following files for a new project:
+  - _/config/deploy.rb_ 
+  - _/config/deploy/*.rb_
+  - _mkdocs.yml_
 
 ## Middleman Installation
 

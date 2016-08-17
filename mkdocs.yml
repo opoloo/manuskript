@@ -1,10 +1,10 @@
-site_name: Oldtimer-Markt Documentation
+site_name: Project Documentation
 theme_dir: docoloo
 site_dir: doc_build
 docs_dir: docs
 site_author: Opoloo
-repo_url: https://github.com/opoloo/oldtimer-markt
-site_url: https://opoloo.github.io/oldtimer-markt
+repo_url: https://github.com/opoloo/middleman-template
+site_url: https://opoloo.github.io/middleman-template
 extra_css:
 #  - stylesheets/base.css
 extra_javascript:

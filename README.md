@@ -1,5 +1,13 @@
 # Opoloo Middleman template
 
+## Configuration
+
+Adjust the following files for a new project:
+
+- _/config/deploy.rb_ 
+- _/config/deploy/*.rb_
+- _mkdocs.yml_
+
 ## Middleman Installation
 
 Siehe https://github.com/middleman/middleman/blob/master/README.md
@@ -8,7 +16,6 @@ Siehe https://github.com/middleman/middleman/blob/master/README.md
 
 **Notice:** Add your publickey to the ~/.ssh/authorized_keys file on the magmapool server if you want to be able to connect via pubkey authentication.
 
-**IMPORTANT**: _/config/deploy.rb_ und _/config/deploy/*.rb_ anpassen!
 
 ```
 # staging

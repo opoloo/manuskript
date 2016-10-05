@@ -1,41 +1,40 @@
-# Oldtimer Markt Templates
+# Middleman Templates
 
 
-## Verzeichnisstruktur
+## Directory structure
 
 ```
-├── build             # Generierte statische Version
-├── doc_build         # Generierte Dokumentation
-├── docoloo           # Theme für Dokumentation
-├── docs              # Quelldatein der Dokumentation
-└── source            # Quelldateien 
-    ├── fonts         # Schriftarten
-    ├── images        # Bilder
-    ├── javascripts   # Javascripts
-    ├── layouts       # Grundgerüst von Seiten
-    └── stylesheets   # Stylesheets
+├── build             # compiled static version
+├── doc_build         # compiled documentation 
+├── docoloo           # theme for documentation
+├── docs              # documentation source files
+└── source            # project source files
+    ├── fonts         # fonts
+    ├── images        # images
+    ├── javascripts   # javascript
+    ├── layouts       # page layout
+    └── stylesheets   # stylesheets
 ```
 
 
 ## Middleman
 
-Die Quelldateien befinden sich im _/source_ Verzeichnis
+Source goes into the _/source_ directory.
 
-- Server starten: `middleman s[erver]`
-- Statische Version in _/build_ kompilieren: `middleman build`
+- Start local web-server: `middleman s[erver]`
+- compile to _/build_ directory: `middleman build`
 
-## Dokumentation
+## Documentation
 
-Die Quelldateien der Dokumentation befinden sich im _/docs_ Verzeichnis. Zum Erstellen einer statischen Version
-wird __mkdocs__ verwendet
+Source code for documentation is placed inside the _/docs_ directory. 
 
-### mkdocs installieren
+### Instalk mkdocs
 
-Python und pip müssen installiert sein.
+Python and pip must be instaled on your system.
 
 `pip install mkdocs`
 
-### mkdocs Kurzanleitung
+### mkdocs quickstart
 
 ```
 Usage: mkdocs [OPTIONS] COMMAND [ARGS]...

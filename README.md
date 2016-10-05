@@ -10,22 +10,22 @@
 
 ## Middleman Installation
 
-Siehe https://github.com/middleman/middleman/blob/master/README.md
+See https://github.com/middleman/middleman/blob/master/README.md
 
 
-## Lokalen Server starten
+## Start local server
 
 ```
 middleman server
 ```
 
-## Statische Version kompilieren
+## Compile static website
 
 ```
 middleman build
 ```
 
-Dadurch wird ein Verzeichnis **/build/** angelegt, in dem die kompilierten Dateien zu finden sind.
+The compiled result resides inside the _/build/_ directory.
 
 ## Documentation
 
@@ -50,13 +50,9 @@ Deploy the documentation to github pages:
 
 `mkdocs gh-deploy -c`
 
-
-
-
-
 ## Deployment
 
-**Notice:** Add your publickey to the ~/.ssh/authorized_keys file on the magmapool server if you want to be able to connect via pubkey authentication.
+**Notice:** Add your publickey to the *~/.ssh/authorized_keys* file on the server if you want to be able to connect via pubkey authentication.
 
 
 ```

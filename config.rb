@@ -48,35 +48,6 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
-activate :imageoptim do |options|
-  # Use a build manifest to prevent re-compressing images between builds
-  options.manifest = true
-
-  # Silence problematic image_optim workers
-  options.skip_missing_workers = true
-
-  # Cause image_optim to be in shouty-mode
-  options.verbose = false
-
-  # Setting these to true or nil will let options determine them (recommended)
-  options.nice = true
-  options.threads = true
-
-  # Image extensions to attempt to compress
-  options.image_extensions = %w(.png .jpg .gif .svg)
-
-  # Compressor worker options, individual optimisers can be disabled by passing
-  # false instead of a hash
-  options.advpng    = { :level => 4 }
-  options.gifsicle  = { :interlace => false }
-  options.jpegoptim = { :strip => ['all'], :max_quality => 75 }
-  options.jpegtran  = { :copy_chunks => false, :progressive => true, :jpegrescan => true }
-  options.optipng   = { :level => 6, :interlace => false }
-  options.pngcrush  = { :chunks => ['alla'], :fix => false, :brute => false }
-  options.pngout    = { :copy_chunks => false, :strategy => 0 }
-  options.svgo      = false
-end
-
 activate :minify_html do |html|
   html.remove_multi_spaces        = true   # Remove multiple spaces
   html.remove_comments            = true   # Remove comments
@@ -97,8 +68,4 @@ activate :minify_html do |html|
 end
 
 #i18n
-
 activate :i18n, langs: [:de, :en], mount_at_root: :de, templates_dir: "pages"
-
-page "/sitemap.xml", layout: false
-

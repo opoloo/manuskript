@@ -16,8 +16,6 @@ page '/*.txt', layout: false
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
-# General configuration
-
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
@@ -28,25 +26,50 @@ end
 # Helpers
 ###
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def some_helper
+    "Helping"
+  end
+end
 
 # Build-specific configuration
 configure :build do
-  # Minify CSS on build
   activate :minify_css
-
-  # Minify Javascript on build
   activate :minify_javascript
 end
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
+
+activate :imageoptim do |options|
+  # Use a build manifest to prevent re-compressing images between builds
+  options.manifest = true
+
+  # Silence problematic image_optim workers
+  options.skip_missing_workers = true
+
+  # Cause image_optim to be in shouty-mode
+  options.verbose = false
+
+  # Setting these to true or nil will let options determine them (recommended)
+  options.nice = true
+  options.threads = true
+
+  # Image extensions to attempt to compress
+  options.image_extensions = %w(.png .jpg .gif .svg)
+
+  # Compressor worker options, individual optimisers can be disabled by passing
+  # false instead of a hash
+  options.advpng    = { :level => 4 }
+  options.gifsicle  = { :interlace => false }
+  options.jpegoptim = { :strip => ['all'], :max_quality => 75 }
+  options.jpegtran  = { :copy_chunks => false, :progressive => true, :jpegrescan => true }
+  options.optipng   = { :level => 6, :interlace => false }
+  options.pngcrush  = { :chunks => ['alla'], :fix => false, :brute => false }
+  options.pngout    = { :copy_chunks => false, :strategy => 0 }
+  options.svgo      = false
+end
 
 activate :minify_html do |html|
   html.remove_multi_spaces        = true   # Remove multiple spaces
@@ -69,3 +92,5 @@ end
 
 #i18n
 activate :i18n, langs: [:de, :en], mount_at_root: :de, templates_dir: "pages"
+
+

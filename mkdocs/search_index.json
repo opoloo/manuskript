@@ -1,0 +1,39 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Middleman Templates\n#\n\n\nDirectory structure\n#\n\n\n\u251c\u2500\u2500 build             # compiled static version\n\u251c\u2500\u2500 doc_build         # compiled documentation \n\u251c\u2500\u2500 docoloo           # theme for documentation\n\u251c\u2500\u2500 docs              # documentation source files\n\u2514\u2500\u2500 source            # project source files\n    \u251c\u2500\u2500 fonts         # fonts\n    \u251c\u2500\u2500 images        # images\n    \u251c\u2500\u2500 javascripts   # javascript\n    \u251c\u2500\u2500 layouts       # page layout\n    \u2514\u2500\u2500 stylesheets   # stylesheets\n\n\n\n\n\nMiddleman\n#\n\n\nSource goes into the \n/source\n directory.\n\n\n\n\nStart local web-server: \nmiddleman s[erver]\n\n\ncompile to \n/build\n directory: \nmiddleman build\n\n\n\n\nDocumentation\n#\n\n\nSource code for documentation is placed inside the \n/docs\n directory. \n\n\nInstalk mkdocs\n#\n\n\nPython and pip must be instaled on your system.\n\n\npip install mkdocs\n\n\nmkdocs quickstart\n#\n\n\nUsage\n:\n \nmkdocs\n \n[\nOPTIONS\n]\n \nCOMMAND\n \n[\nARGS\n]...\n\n\n  \nMkDocs\n \n-\n \nProject\n \ndocumentation\n \nwith\n \nMarkdown\n.\n\n\n\nOptions\n:\n\n  \n-\nV\n,\n \n--\nversion\n  \nShow\n \nthe\n \nversion\n \nand\n \nexit\n.\n\n  \n-\nq\n,\n \n--\nquiet\n    \nSilence\n \nwarnings\n\n  \n-\nv\n,\n \n--\nverbose\n  \nEnable\n \nverbose\n \noutput\n\n  \n-\nh\n,\n \n--\nhelp\n     \nShow\n \nthis\n \nmessage\n \nand\n \nexit\n.\n\n\n\nCommands\n:\n\n  \nbuild\n      \nBuild\n \nthe\n \nMkDocs\n \ndocumentation\n\n  \ngh\n-\ndeploy\n  \nDeploy\n \nyour\n \ndocumentation\n \nto\n \nGitHub\n \nPages\n\n  \njson\n       \nBuild\n \nthe\n \nMkDocs\n \ndocumentation\n \nto\n \nJSON\n \nfiles\n...\n\n  \nnew\n        \nCreate\n \na\n \nnew\n \nMkDocs\n \nproject\n\n  \nserve\n      \nRun\n \nthe\n \nbuiltin\n \ndevelopment\n \nserver",
+            "title": "Home"
+        },
+        {
+            "location": "/#middleman-templates",
+            "text": "",
+            "title": "Middleman Templates"
+        },
+        {
+            "location": "/#directory-structure",
+            "text": "\u251c\u2500\u2500 build             # compiled static version\n\u251c\u2500\u2500 doc_build         # compiled documentation \n\u251c\u2500\u2500 docoloo           # theme for documentation\n\u251c\u2500\u2500 docs              # documentation source files\n\u2514\u2500\u2500 source            # project source files\n    \u251c\u2500\u2500 fonts         # fonts\n    \u251c\u2500\u2500 images        # images\n    \u251c\u2500\u2500 javascripts   # javascript\n    \u251c\u2500\u2500 layouts       # page layout\n    \u2514\u2500\u2500 stylesheets   # stylesheets",
+            "title": "Directory structure"
+        },
+        {
+            "location": "/#middleman",
+            "text": "Source goes into the  /source  directory.   Start local web-server:  middleman s[erver]  compile to  /build  directory:  middleman build",
+            "title": "Middleman"
+        },
+        {
+            "location": "/#documentation",
+            "text": "Source code for documentation is placed inside the  /docs  directory.",
+            "title": "Documentation"
+        },
+        {
+            "location": "/#instalk-mkdocs",
+            "text": "Python and pip must be instaled on your system.  pip install mkdocs",
+            "title": "Instalk mkdocs"
+        },
+        {
+            "location": "/#mkdocs-quickstart",
+            "text": "Usage :   mkdocs   [ OPTIONS ]   COMMAND   [ ARGS ]... \n\n   MkDocs   -   Project   documentation   with   Markdown .  Options : \n   - V ,   -- version    Show   the   version   and   exit . \n   - q ,   -- quiet      Silence   warnings \n   - v ,   -- verbose    Enable   verbose   output \n   - h ,   -- help       Show   this   message   and   exit .  Commands : \n   build        Build   the   MkDocs   documentation \n   gh - deploy    Deploy   your   documentation   to   GitHub   Pages \n   json         Build   the   MkDocs   documentation   to   JSON   files ... \n   new          Create   a   new   MkDocs   project \n   serve        Run   the   builtin   development   server",
+            "title": "mkdocs quickstart"
+        }
+    ]
+}

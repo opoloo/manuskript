@@ -13,7 +13,8 @@ gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
 gem 'middleman-compass', '>= 4.0.0'
 gem 'middleman-autoprefixer'
-gem "middleman-minify-html"
+gem 'middleman-minify-html'
+gem 'middleman-sprockets'
 gem 'middleman-imageoptim', github: 'plasticine/middleman-imageoptim', branch: 'middleman-4'
 
 # Capistrano deployment

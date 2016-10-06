@@ -1,13 +1,622 @@
 ---
-title: Welcome to Middleman
+title: Manuskript 0.1
 ---
+<div class="cs">
+  <img src="assets/images/ill-book.png" alt="" />
+  <h1>Manuskript</h1>
+  <p class="tl">
+    Manuskript is an HTML template to quickly prototype websites. There’s no need to install anything. Layout and styling options are few, but can be build out with basic CSS/SASS knowledge.
+  </p>
+  <p>
+    You’re looking at the the template, right now. Scroll to the bottom of this page to see what’s possible.
+  </p>
+  <p>
+    You’re free to use Manuskript as a blueprint for your own websites. Download the source at <a href="#">Github</a> or by pressing <code>Ctrl+S</code>.
+  </p>
+  <ol class="toc">
+    <li><a href="#container">Container</a></li>
+    <li><a href="#grids">Grids</a></li>
+    <li><a href="#default-elements">Defaults</a></li>
+    <li><a href="#alternative-styles">Styles</a></li>
+    <li><a href="#special-elements">Specials</a></li>
+  </ol>
+  <p>
+    Created by <a href="https://www.opoloo.com">Opoloo</a>, <a href="https://www.opoloo.com/de/imprint">imprint</a>.
+  </p>
+</div>
 
-<div class="welcome">
-  <div class="logo">
-    <%= image_tag "middleman-logo.svg" %>
+<!-- Containers -->
+<div class="cl">
+  <hr>
+  <img src="assets/images/ill-frame.png" alt="" />
+</div>
+<div class="cs">
+  <h1 id="container">Container</h1>
+  <p class="tl">
+    To structure a site, every logical group of information should be arranged in containers, from top to bottom. These control margins, paddings and breakpoints. Containers are available in three sizes — large containers cover the page’s full width. Medium containers measure 980 pixels. Small containers are 700 pixels wide and best for reading extensive copy.
+  </p>
+</div>
+<div class="cl bgalt">
+  <h5>Container large</h5>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+  <pre><code>div class="cl"</code></pre>
+</div>
+<div class="cm">
+  <h5>Container medium</h5>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+  <pre><code>div class="cm"</code></pre>
+</div>
+<div class="cs bgalt">
+  <h5>Container small</h5>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+  <pre><code>div class="cs"</code></pre>
+</div>
+
+<!-- Grids -->
+<div class="cl">
+  <a href="#" class="backtotop tertiary center">↑ Back to top</a>
+  <hr>
+  <img src="assets/images/ill-chess.png" alt="" />
+</div>
+<div class="cs">
+  <h1 id="grids">Grids</h1>
+  <p class="tl">
+    Each container can be split into columns. The number of evenly spaced columns is determined by the amount of direct child-divs.
+  </p>
+  <pre><code>div class="grid"
+  div
+  div</code></pre>
+</div>
+<div class="cm grid">
+  <div>
+    <h5>Two columns</h5>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
   </div>
-  <h1>Middleman is Running</h1>
-  <p class="doc">
-    <%= link_to "Read Documentation Online", "https://middlemanapp.com", target: "_blank" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+  <div class="bgalt">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+</div>
+<div class="cm grid">
+  <div>
+    <h5>Three columns</h5>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+  <div class="bgalt">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+  <div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+</div>
+<div class="cm grid">
+  <div>
+    <h5>Four columns</h5>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+  <div class="bgalt">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+  <div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+  <div class="bgalt">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+</div>
+
+<!-- Growing columns -->
+<div class="cs">
+  <h2 id="growing-columns">Growing columns</h2>
+  <p class="tl">
+    If we want certain columns to be bigger than others, we can use four modifiers on the respective div-box. Note that this spacing is influenced by the respective margins and padings.
+  </p>
+</div>
+<div class="cm grid">
+  <div class="g2">
+    <h5>Two times</h5>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+    <pre><code>div class="g2"</code></pre>
+  </div>
+  <div class="bgalt">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+  <div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+  <div class="bgalt">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+</div>
+<div class="cm grid">
+  <div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+  <div class="bgalt g3">
+    <h5>Three times</h5>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+    <pre><code>div class="g3"</code></pre>
+  </div>
+  <div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+  <div class="bgalt">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+</div>
+<div class="cm grid">
+  <div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+  <div class="bgalt">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+  <div class="g4">
+    <h5>Four times</h5>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+    <pre><code>div class="g4"</code></pre>
+  </div>
+  <div class="bgalt">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+</div>
+
+<!-- Defaults -->
+<div class="cl">
+  <a href="#" class="backtotop tertiary center">↑ Back to top</a>
+  <hr>
+  <img src="assets/images/ill-chair.png" alt="" />
+</div>
+<div class="cs">
+  <h1 id="default-elements">Defaults</h1>
+  <p class="tl">
+    Containers and grids are used for layouting the site. These divs can then be filled with the actual content, made up of headlines, paragraphs, lists and everything else below.
+  </p>
+</div>
+<div class="cm">
+  <h1>Headline Style H1</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p><strong>Strong copy</strong> lorem ipsum dolor sit amet, <em>emphasized copy</em> consectetur adipisicing elit, <strong><em>strong &amp; emphasized copy</em></strong> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <h2>Headline Style H2</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <h3>Headline Style H3</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <h4>Headline Style H4</h4>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <h5>Headline Style H5</h5>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <h6>Headline Style H6</h6>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <h2>Images</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+  <img src="assets/images/2000x1000.png" alt="2000 by 1000 image" />
+  <pre><code>img src="assets/images/2000x1000.png</code></pre>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+  <img src="assets/images/500x500.png" alt="500 by 500 image" />
+  <pre><code>img src="assets/images/500x500.png</code></pre>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+  <img src="assets/images/100x100.png" alt="100 by 100 image" />
+  <pre><code>img src="assets/images/100x100.png</code></pre>
+  <h2>Links</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur <a href="#">dipisicing elit sed do eiusmod</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </p>
+  <h3><a href="#">Headline H3 Linked</a></h3>
+  <h5><a href="#">Headline H5 Linked</a></h5>
+  <h2>Unsorted-lists</h2>
+  <ul>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ipsum dolor sit amet.</li>
+    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+    <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+  </ul>
+  <h2>Sorted-lists</h2>
+  <ol>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ipsum dolor sit amet.</li>
+    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+    <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+  </ol>
+  <h2>Divider</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+  <hr>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+  <h2>Tables</h2>
+  <table>
+    <tr>
+      <th>Lorem ipsum</th>
+      <th>Dolor sit amet</th>
+      <th>Consectetur</th>
+    </tr>
+    <tr>
+      <td>Duis aute</td>
+      <td>Cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat</td>
+      <td>Excepteur sint occaecat cupidatat</td>
+    </tr>
+    <tr>
+      <td>Duis aute</td>
+      <td>Cillum dolore eu fugiat nulla pariatur</td>
+      <td>Excepteur sint occaecat cupidatat</td>
+    </tr>
+  </table>
+  <h2>Quotes</h2>
+  <blockquote>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+  </blockquote>
+  <h2>Code</h2>
+  <p>
+    Code can be <code>placed inline</code> or as a dedicated pre-block:
+  </p>
+  <pre><code>public class HelloWorld {
+    public static void main(String[] args){
+      System.out.println("Hello World!");
+    }
+  }</code></pre>
+  <h2>Forms</h2>
+  <form>
+    <label for="email">Email</label>
+    <input type="text" name="email">
+    <label for="name">Name</label>
+    <input type="text" name="name">
+    <label for="content">Content</label>
+    <textarea name="content" id=""></textarea>
+    <input type="submit" value="Input Submit">
+  </form>
+  <form>
+    <label><input type="checkbox" value="option1">Auswahl 1</label>
+    <label><input type="checkbox" value="option2">Auswahl 2</label>
+    <label><input type="radio" name="radiobutton" value="option1">Auswahl 1</label>
+    <label><input type="radio" name="radiobutton" value="option2">Auswahl 2</label>
+    <button type="submit">Button Submit</button>
+  </form>
+  <form>
+    <select name="dropbdown">
+      <option value="1">Auswahl 1</option>
+      <option value="2">Auswahl 2</option>
+      <option value="3">Auswahl 3</option>
+      <option value="4">Auswahl 4</option>
+      <option value="5">Auswahl 5</option>
+      <option value="6">Auswahl 6</option>
+      <option value="7">Auswahl 7</option>
+      <option value="8">Auswahl 8</option>
+    </select>
+  </form>
+</div>
+
+<!-- Alternative Styles -->
+<div class="cl">
+  <a href="#" class="backtotop tertiary center">↑ Back to top</a>
+  <hr>
+  <img src="assets/images/ill-pillar.png" alt="" />
+</div>
+<div class="cs">
+  <h1 id="alternative-styles">Styles</h1>
+  <p class="tl">
+    Special styles can be applied to various elements for additional differentiation.
+  </p>
+</div>
+<div class="cm">
+  <h2>Text-color</h2>
+  <p>Headlines, paragraphs and other text-elements are colored by a default:</p>
+  <pre><code>class="fnormal"</code></pre>
+  <p>If needed, each can be styled with two alternative colors.</p>
+  <div class="grid bgalt">
+    <div>
+      <h5 class="falt">Alternative</h5>
+      <p class="falt">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <pre><code>class="falt"</code></pre>
+    </div>
+    <div>
+      <h5 class="finv">Inverted</h5>
+      <p class="finv">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <pre><code>class="finv"</code></pre>
+    </div>
+  </div>
+  <h2>Background-color</h2>
+  <p>Containers and grid-boxes can also be colored in three styles. Note, that inverted boxes automatically color their content respectively.</p>
+  <div class="grid">
+    <div class="bgnormal">
+      <h5>Normal</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+      <pre><code>div class="bgnormal"</code></pre>
+    </div>
+    <div class="bgalt">
+      <h5>Alternative</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+      <pre><code>div class="bgalt"</code></pre>
+    </div>
+    <div class="bginv">
+      <h5>Inverted</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+      <pre><code>div class="bginv"</code></pre>
+    </div>
+  </div>
+  <h2>Alignment</h2>
+  <p>Elements within a div can be aligned left (default), right or centered</p>
+  <div class="grid">
+    <div class="left">
+      <h5>Left</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+      <pre><code>div class="left"</code></pre>
+    </div>
+    <div class="center">
+      <h5>Center</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+      <pre><code>div class="center"</code></pre>
+    </div>
+    <div class="right">
+      <h5>Right</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+      <pre><code>div class="right"</code></pre>
+    </div>
+  </div>
+  <h2>Buttons</h2>
+  <p>
+    Links can be displayed as dedicated buttons in three different styles.
+  </p>
+  <div class="grid">
+    <div>
+      <a href="#" class="primary">Primary Button</a>
+      <pre><code>a class="primary"</code></pre>
+    </div>
+    <div>
+      <a href="#" class="secondary">Secondary Button</a>
+      <pre><code>a class="secondary"</code></pre>
+    </div>
+    <div>
+      <a href="#" class="tertiary">Tertiary Button</a>
+      <pre><code>a class="tertiary"</code></pre>
+    </div>
+  </div>
+  <h2>Text Sizes</h2>
+  <p>
+    Paragraphs can be styled with different sizes, as needed.
+  </p>
+  <div class="grid">
+    <div>
+      <h5>Normal</h5>
+      <p class="tm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <pre><code>p class="tm"</code></pre>
+    </div>
+    <div class="bgalt">
+      <h5>Small</h5>
+      <p class="ts">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <pre><code>p class="ts"</code></pre>
+    </div>
+    <div>
+      <h5>Big</h5>
+      <p class="tl">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <pre><code>p class="tl"</code></pre>
+    </div>
+    <div class="bgalt">
+      <h5>Very Big</h5>
+      <p class="txl">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <pre><code>p class="txl"</code></pre>
+    </div>
+  </div>
+  <h5>Very Very Big</h5>
+  <p class="txxl">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <pre><code>p class="txxl"</code></pre>
+</div>
+
+<!-- Special Elements -->
+<div class="cl">
+  <a href="#" class="backtotop tertiary center">↑ Back to top</a>
+  <hr>
+  <img src="assets/images/ill-lamp.png" alt="" />
+</div>
+<div class="cs">
+  <h1 id="special-elements">Specials</h1>
+  <p class="tl">
+    Some common elements are predefined, such as article-previews or navigations.
+  </p>
+</div>
+
+<div class="cs">
+  <h2>Articles</h2>
+  <p class="tl">
+    Articles are always a combination of an image and a set of other elements like headlines, paragraphs or buttons. The default article’s image is positioned to the left of all other elements.
+  </p>
+</div>
+<div class="cm">
+  <div class="article">
+    <div>
+      <img src="assets/images/500x500.png" alt="500 by 500 image" />
+    </div>
+    <div>
+      <h3>Article</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+  </div>
+  <div class="article">
+    <div>
+      <img src="assets/images/100x100.png" alt="100 by 100 image" />
+    </div>
+    <div>
+      <h4>Article</h4>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+  </div>
+  <div class="article">
+    <div>
+      <img src="assets/images/2000x1000.png" alt="2000 by 1000 image" />
+    </div>
+    <div>
+      <h5>Article</h5>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+  </div>
+  <pre><code>div class="article"
+ div
+   img
+ div
+   h1
+   p</code></pre>
+</div>
+
+<div class="cs">
+  <h2>Articles with right image</h2>
+  <p class="tl">
+    Article-images can also be placed right, if needed.
+  </p>
+</div>
+<div class="cm">
+  <div class="article aright">
+    <div>
+      <img src="assets/images/500x500.png" alt="500 by 500 image" />
+    </div>
+    <div>
+      <h3>Article</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+  </div>
+  <div class="article aright">
+    <div>
+      <img src="assets/images/100x100.png" alt="100 by 100 image" />
+    </div>
+    <div>
+      <h4>Article</h4>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+  </div>
+  <div class="article aright">
+    <div>
+      <img src="assets/images/2000x1000.png" alt="2000 by 1000 image" />
+    </div>
+    <div>
+      <h5>Article</h5>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+  </div>
+  <pre><code>div class="article aright"
+ div
+   img
+ div
+   h1
+   p</code></pre>
+</div>
+
+<div class="cs">
+  <h2>Articles with vertical image</h2>
+  <p class="tl">
+    Article-grids can benefit from their images being placed above the content.
+  </p>
+</div>
+<div class="cm grid">
+  <div class="article atop">
+    <div>
+      <img src="assets/images/500x500.png" alt="500 by 500 image" />
+    </div>
+    <div>
+      <h3>Article</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+  </div>
+  <div class="article atop">
+    <div>
+      <img src="assets/images/100x100.png" alt="100 by 100 image" />
+    </div>
+    <div>
+      <h4>Article</h4>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+  </div>
+  <div class="article atop">
+    <div>
+      <img src="assets/images/2000x1000.png" alt="2000 by 1000 image" />
+    </div>
+    <div>
+      <h5>Article</h5>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="cm">
+  <pre><code>div class="article atop"
+ div
+   img
+ div
+   h1
+   p</code></pre>
+</div>
+
+<div class="cs">
+  <h2>Navigations</h2>
+  <p class="tl">
+    Navigations are lists that can run vertically or horizontally, and turn to icons at mobile sizes.
+  </p>
+</div>
+<div class="cm grid">
+  <div class="bgalt">
+    <h5>Vertical Navigation</h5>
+    <ul class="navigation">
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Team</a></li>
+      <li><a href="#">Philosophy</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <pre><code>ul class="navigation"</code></pre>
+  </div>
+  <div class="g3">
+    <h5>Horizontal Navigation</h5>
+    <ul class="navigation nh">
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Team</a></li>
+      <li><a href="#">Philosophy</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <pre><code>ul class="navigation nh"</code></pre>
+    <ul class="navigation nh right">
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Team</a></li>
+      <li><a href="#">Philosophy</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <pre><code>ul class="navigation nh right"</code></pre>
+  </div>
+</div>

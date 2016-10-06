@@ -22,13 +22,46 @@ configure :development do
   activate :autoprefixer
 end
 
+activate :i18n, langs: [:de, :en], mount_at_root: :de, templates_dir: "pages"
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :images_dir, 'assets/images'
+
+activate :sprockets
+
+
 ###
 # Helpers
 ###
 
 helpers do
-  def some_helper
-    "Helping"
+  # Returns an array of available languages besides the current one
+  def other_langs
+    langs - [I18n.locale]
+  end
+
+  #
+  # returns the correct path in the current locale
+  # @example
+  # = link_to "bar", url("foo/bar.html")
+  #
+  def path(url, options = {})
+    lang = options[:lang] || I18n.locale.to_s
+    if lang.to_s == 'de'
+      prefix = ''
+    else
+      prefix = "/#{lang}"
+    end
+
+    prefix + "/" + clean_from_i18n(url)
+  end
+
+  # removes an i18n lang code from url if its present
+  def clean_from_i18n(url)
+    parts = url.split('/').select { |p| p && p.size > 0 }
+    parts.shift if langs.map(&:to_s).include?(parts[0])
+
+    parts.join('/')
   end
 end
 
@@ -36,11 +69,25 @@ end
 configure :build do
   activate :minify_css
   activate :minify_javascript
+  activate :minify_html do |html|
+    html.remove_multi_spaces        = true   # Remove multiple spaces
+    html.remove_comments            = true   # Remove comments
+    html.remove_intertag_spaces     = false  # Remove inter-tag spaces
+    html.remove_quotes              = true   # Remove quotes
+    html.simple_doctype             = false  # Use simple doctype
+    html.remove_script_attributes   = false   # Remove script attributes
+    html.remove_style_attributes    = false   # Remove style attributes
+    html.remove_link_attributes     = false   # Remove link attributes
+    html.remove_form_attributes     = false  # Remove form attributes
+    html.remove_input_attributes    = false   # Remove input attributes
+    html.remove_javascript_protocol = true   # Remove JS protocol
+    html.remove_http_protocol       = false  # Remove HTTP protocol
+    html.remove_https_protocol      = false  # Remove HTTPS protocol
+    html.preserve_line_breaks       = false  # Preserve line breaks
+    html.simple_boolean_attributes  = true   # Use simple boolean attributes
+    html.preserve_patterns          = nil    # Patterns to preserve
+  end
 end
-
-set :css_dir, 'stylesheets'
-set :js_dir, 'javascripts'
-set :images_dir, 'images'
 
 activate :imageoptim do |options|
   # Use a build manifest to prevent re-compressing images between builds
@@ -70,27 +117,4 @@ activate :imageoptim do |options|
   options.pngout    = { :copy_chunks => false, :strategy => 0 }
   options.svgo      = false
 end
-
-activate :minify_html do |html|
-  html.remove_multi_spaces        = true   # Remove multiple spaces
-  html.remove_comments            = true   # Remove comments
-  html.remove_intertag_spaces     = false  # Remove inter-tag spaces
-  html.remove_quotes              = true   # Remove quotes
-  html.simple_doctype             = false  # Use simple doctype
-  html.remove_script_attributes   = false   # Remove script attributes
-  html.remove_style_attributes    = false   # Remove style attributes
-  html.remove_link_attributes     = false   # Remove link attributes
-  html.remove_form_attributes     = false  # Remove form attributes
-  html.remove_input_attributes    = false   # Remove input attributes
-  html.remove_javascript_protocol = true   # Remove JS protocol
-  html.remove_http_protocol       = false  # Remove HTTP protocol
-  html.remove_https_protocol      = false  # Remove HTTPS protocol
-  html.preserve_line_breaks       = false  # Preserve line breaks
-  html.simple_boolean_attributes  = true   # Use simple boolean attributes
-  html.preserve_patterns          = nil    # Patterns to preserve
-end
-
-#i18n
-activate :i18n, langs: [:de, :en], mount_at_root: :de, templates_dir: "pages"
-
 

@@ -22,12 +22,13 @@ configure :development do
   activate :autoprefixer
 end
 
-activate :i18n, langs: [:de, :en], mount_at_root: :de, templates_dir: "pages"
+activate :i18n, langs: [:en, :de], mount_at_root: :en, templates_dir: "pages"
+activate :sprockets
+
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 
-activate :sprockets
 
 
 ###
@@ -47,7 +48,7 @@ helpers do
   #
   def path(url, options = {})
     lang = options[:lang] || I18n.locale.to_s
-    if lang.to_s == 'de'
+    if lang.to_s == 'en'
       prefix = ''
     else
       prefix = "/#{lang}"

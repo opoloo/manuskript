@@ -1,5 +1,13 @@
 # Opoloo Middleman template
 
+## Features
+
+- Automated deployment
+- Multiple languages (i18n)
+- Integrated documentation (mkdocs)
+- Automated image optimization
+- SASS/SCSS, Coffee and Sprockets support
+
 ## Configuration
 
 1. Clone: `git clone git@github.com:opoloo/middleman-template.git <projectname>`
@@ -44,7 +52,7 @@ Start a local development server to live-preview the generated documentation fil
 
 `mkdocs serve`
 
-### Deployment
+### Deploy documentation
 
 Deploy the documentation to github pages:
 

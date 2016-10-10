@@ -10,6 +10,7 @@
 # Ignore the build directories
 /build
 /doc_build
+/docs/doc_build
 
 # Ignore cache
 /.sass-cache

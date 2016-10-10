@@ -5,7 +5,7 @@ site_url: https://opoloo.github.io/middleman-template
 theme_dir: ./mkdocs-themes/docoloo
 
 site_dir: doc_build
-docs_dir: docs
+docs_dir: project-documentation
 
 extra_css:
 #  - stylesheets/base.css

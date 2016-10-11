@@ -1,8 +1,8 @@
 /* FONTS */
 
-@import url(//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i)
-@import url(//fonts.googleapis.com/css?family=Kreon:300,400,700)
-@import url(//fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i)
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i)
+@import url(https://fonts.googleapis.com/css?family=Kreon:300,400,700)
+@import url(https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i)
 
 /* VARIABLES */
 
@@ -243,6 +243,7 @@ input[type=checkbox], input[type=radio]
 input[type=submit], button
   text-transform: uppercase
   background-color: $bgalt
+  border: none
   display: block
 input[type=submit]:hover, button:hover
   color: $finv
@@ -276,6 +277,11 @@ a
 .bginv
   color: $finv
   background-color: $bginv
+.brandmain
+  color: $finv
+  background-color: $brandmain
+.brandalt
+  background-color: $brandalt
 
 /* alignment */
 .left
@@ -313,6 +319,7 @@ a
   text-transform: uppercase
   display: table
   &:hover
+    border: none
     color: $finv
     background-color: $bginv
 .primary

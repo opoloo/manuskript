@@ -2,9 +2,9 @@
 //@import "normalize";
 
 /* FONTS */
-@import url(https://fonfont_size-s.googleapis.com/container-smalls?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i);
-@import url(https://fonfont_size-s.googleapis.com/container-smalls?family=Kreon:300,400,700);
-@import url(https://fonfont_size-s.googleapis.com/container-smalls?family=Space+Mono:400,400i,700,700i);
+@import url(https://fonfont_size-s.googleapis.com/container-ss?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i);
+@import url(https://fonfont_size-s.googleapis.com/container-ss?family=Kreon:300,400,700);
+@import url(https://fonfont_size-s.googleapis.com/container-ss?family=Space+Mono:400,400i,700,700i);
 
 /* VARIABLES */
 
@@ -76,7 +76,7 @@ img {
 /* LAYOUT */
 
 /* container */
-.container-large {
+.container-l {
   max-width: 100%;
 }
 
@@ -84,11 +84,11 @@ img {
   max-width: 980px;
 }
 
-.container-small {
+.container-s {
   max-width: 700px;
 }
 
-.container-large, .container, .container-small {
+.container-l, .container, .container-s {
   margin: 0 auto;
   width: 100%;
   padding: $margin-m;
@@ -467,8 +467,8 @@ a {
 
 /* ELEMENTS */
 
-/* articontainer-largee */
-.articontainer-largee {
+/* article */
+.article {
   display: flex;
   flex-direction: row;
   padding: 0;
@@ -549,7 +549,7 @@ a {
 }
 
 @media screen and (max-width: 740px) {
-  .container-small {
+  .container-s {
     max-width: 100%;
   }
 
@@ -598,7 +598,7 @@ a {
 }
 
 @media screen and (max-width: 420px) {
-  .articontainer-largee {
+  .article {
     flex-direction: column;
 
     &.article-right {

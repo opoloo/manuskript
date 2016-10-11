@@ -2,9 +2,9 @@
 //@import "normalize";
 
 /* FONTS */
-@import url(https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i);
-@import url(https://fonts.googleapis.com/css?family=Kreon:300,400,700);
-@import url(https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i);
+@import url(https://fonfont_size-s.googleapis.com/container-smalls?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i);
+@import url(https://fonfont_size-s.googleapis.com/container-smalls?family=Kreon:300,400,700);
+@import url(https://fonfont_size-s.googleapis.com/container-smalls?family=Space+Mono:400,400i,700,700i);
 
 /* VARIABLES */
 
@@ -35,7 +35,7 @@ $font_size-l: 1.375rem;
 $font_size-xl: 1.75rem;
 $font_size-xxl: 3rem;
 
-/* line-heights */
+/* line-heighfont_size-s */
 $line_height-s: 120%;
 $line_height-m: 140%;
 $line_height-l: 160%;
@@ -61,10 +61,10 @@ $margin-xl: 80px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  //border: 1px dotted falt
+  //border: 1px dotted font_color-alternative
 }
 
-html, body {
+hfont_size-ml, body {
   min-height: 100%;
 }
 
@@ -76,19 +76,19 @@ img {
 /* LAYOUT */
 
 /* container */
-.cl {
+.container-large {
   max-width: 100%;
 }
 
-.cm {
+.container {
   max-width: 980px;
 }
 
-.cs {
+.container-small {
   max-width: 700px;
 }
 
-.cl, .cm, .cs {
+.container-large, .container, .container-small {
   margin: 0 auto;
   width: 100%;
   padding: $margin-m;
@@ -118,15 +118,15 @@ img {
     padding: $margin-m $margin-m 0 $margin-m;
   }
 
-  .g2 {
+  .cols-2 {
     flex: 2 0 0;
   }
 
-  .g3 {
+  .cols-3 {
     flex: 3 0 0;
   }
 
-  .g4 {
+  .cols-4 {
     flex: 4 0 0;
   }
 }
@@ -363,28 +363,28 @@ a {
 /* SPECIAL */
 
 /* font colors */
-.fnormal {
+.font_color-normal {
   color: $font_color-normal;
 }
 
-.falt {
+.font_color-alternative {
   color: $font_color-alternative;
 }
 
-.finv {
+.font_color-inverted {
   color: $font_color-inverted;
 }
 
 /* background-colors */
-.bgnormal {
+.background_color-normal {
   background-color: $background_color-normal;
 }
 
-.bgalt {
+.background_color-alternative {
   background-color: $background_color-alternative;
 }
 
-.bginv {
+.background_color-inverted {
   color: $font_color-inverted;
   background-color: $background_color-inverted;
 }
@@ -414,30 +414,30 @@ a {
 }
 
 /* paragraphs */
-.ts {
+.font_size-s {
   font-size: $font_size-s;
 }
 
-.tm {
+.font_size-m {
   font-size: $font_size-m;
 }
 
-.tl {
+.font_size-l {
   font-size: $font_size-l;
 }
 
-.txl {
+.font_size-xl {
   font-size: $font_size-xl;
   line-height: $line_height-m;
 }
 
-.txxl {
+.font_size-xxl {
   font-size: $font_size-xxl;
   line-height: $line_height-m;
 }
 
 /* buttons */
-.primary, .secondary, .tertiary {
+.button, .button-secondary, .button-tertiary {
   font-size: $font_size-s;
   font-weight: 600;
   line-height: $line_height-m;
@@ -455,20 +455,20 @@ a {
   }
 }
 
-.primary {
+.button {
   background-color: $brand_color-main;
   color: $font_color-inverted;
 }
 
-.secondary {
+.button-secondary {
   background-color: $background_color-alternative;
   color: $font_color-normal;
 }
 
 /* ELEMENTS */
 
-/* article */
-.article {
+/* articontainer-largee */
+.articontainer-largee {
   display: flex;
   flex-direction: row;
   padding: 0;
@@ -487,7 +487,7 @@ a {
     padding: 0 0 0 $margin-m;
   }
 
-  &.atop {
+  &.article-top {
     flex-direction: column;
 
     > div:last-child {
@@ -495,7 +495,7 @@ a {
     }
   }
 
-  &.aright {
+  &.article-right {
     flex-direction: row-reverse;
 
     > div:last-child {
@@ -514,7 +514,7 @@ a {
   overflow-x: hidden;
   padding: 0;
 
-  &.nh {
+  &.navigation-horizontal {
     flex-direction: row;
   }
 
@@ -543,13 +543,13 @@ a {
 /* RESPONSIVE */
 
 @media screen and (max-width: 1000px) {
-  .cm {
+  .container {
     max-width: 100%;
   }
 }
 
 @media screen and (max-width: 740px) {
-  .cs {
+  .container-small {
     max-width: 100%;
   }
 
@@ -591,17 +591,17 @@ a {
     text-align: center;
   }
 
-  .primary, .secondary, .tertiary {
+  .button, .button-secondary, .button-tertiary {
     width: 100%;
     text-align: center;
   }
 }
 
 @media screen and (max-width: 420px) {
-  .article {
+  .articontainer-largee {
     flex-direction: column;
 
-    &.aright {
+    &.article-right {
       flex-direction: column;
     }
   }

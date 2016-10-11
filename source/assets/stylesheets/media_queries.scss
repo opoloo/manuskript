@@ -1,0 +1,64 @@
+@media screen and (max-width: 1000px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .container-small {
+    max-width: 100%;
+  }
+
+  .grid {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html, body {
+    font-size: 14px;
+  }
+
+  hr {
+    margin: $margin-m;
+  }
+
+  ul, ol {
+    padding: 0 0 $margin-m 0;
+  }
+
+  blockquote {
+    p {
+      padding: $margin-s $margin-m $margin-s $margin-m;
+    }
+  }
+
+  select {
+    width: 100%;
+  }
+
+  input[type=submit], button {
+    width: 100%;
+    text-align: center;
+  }
+
+  input[type=submit]:hover, button:hover {
+    width: 100%;
+    text-align: center;
+  }
+
+  .button, .button-secondary, .button-tertiary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .articontainer-largee {
+    flex-direction: column;
+
+    &.article-right {
+      flex-direction: column;
+    }
+  }
+}

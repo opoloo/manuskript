@@ -1,11 +1,11 @@
 @media screen and (max-width: 1000px) {
-  .cm {
+  .container {
     max-width: 100%;
   }
 }
 
 @media screen and (max-width: 740px) {
-  .cs {
+  .container-small {
     max-width: 100%;
   }
 
@@ -20,16 +20,16 @@
   }
 
   hr {
-    margin: $m;
+    margin: $margin-m;
   }
 
   ul, ol {
-    padding: 0 0 $m 0;
+    padding: 0 0 $margin-m 0;
   }
 
   blockquote {
     p {
-      padding: $s $m $s $m;
+      padding: $margin-s $margin-m $margin-s $margin-m;
     }
   }
 
@@ -47,17 +47,17 @@
     text-align: center;
   }
 
-  .primary, .secondary, .tertiary {
+  .button, .button-secondary, .button-tertiary {
     width: 100%;
     text-align: center;
   }
 }
 
 @media screen and (max-width: 420px) {
-  .article {
+  .articontainer-largee {
     flex-direction: column;
 
-    &.aright {
+    &.article-right {
       flex-direction: column;
     }
   }

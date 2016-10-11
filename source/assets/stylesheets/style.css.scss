@@ -2,49 +2,49 @@
 //@import "normalize";
 
 /* FONTS */
-@import url(//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i);
-@import url(//fonts.googleapis.com/css?family=Kreon:300,400,700);
-@import url(//fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i);
+@import url(https://fonfont_size-s.googleapis.com/container-smalls?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i);
+@import url(https://fonfont_size-s.googleapis.com/container-smalls?family=Kreon:300,400,700);
+@import url(https://fonfont_size-s.googleapis.com/container-smalls?family=Space+Mono:400,400i,700,700i);
 
 /* VARIABLES */
 
 /* font-colors */
-$fnormal: #222233;
-$falt: #9999aa;
-$finv: #ffffff;
+$font_color-normal: #222233;
+$font_color-alternative: #9999aa;
+$font_color-inverted: #ffffff;
 
 /* background-colors */
-$bgnormal: #ffffff;
-$bgalt: #e6e6ea;
-$bginv: #222233;
+$background_color-normal: #ffffff;
+$background_color-alternative: #e6e6ea;
+$background_color-inverted: #222233;
 
 /* brand-colors */
-$brandmain: #0065ff;
-$brandalt: #f3ffff;
+$brand_color-main: #0065ff;
+$brand_color-alternative: #f3ffff;
 
 /* font-families */
-$headline: "Kreon", sans-serif;
-$copy: "Lato", sans-serif;
-$code: "Space Mono", monospace;
+$font-headline: "Kreon", sans-serif;
+$font-copy: "Lato", sans-serif;
+$font-code: "Space Mono", monospace;
 
 /* font-sizes */
-$fxs: 0.875rem;
-$fs: 1rem;
-$fm: 1.125rem;
-$fl: 1.375rem;
-$fxl: 1.75rem;
-$fxxl: 3rem;
+$font_size-xs: 0.875rem;
+$font_size-s: 1rem;
+$font_size-m: 1.125rem;
+$font_size-l: 1.375rem;
+$font_size-xl: 1.75rem;
+$font_size-xxl: 3rem;
 
-/* line-heights */
-$narrow: 120%;
-$normal: 140%;
-$wide: 160%;
+/* line-heighfont_size-s */
+$line_height-s: 120%;
+$line_height-m: 140%;
+$line_height-l: 160%;
 
 /* spaces */
-$s: 10px;
-$m: 20px;
-$l: 40px;
-$xl: 80px;
+$margin-s: 10px;
+$margin-m: 20px;
+$margin-l: 40px;
+$margin-xl: 80px;
 
 /* RESET */
 
@@ -56,11 +56,15 @@ $xl: 80px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-
-  //border: 1px dotted falt
+  &:before, &:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  //border: 1px dotted font_color-alternative
 }
 
-html, body {
+hfont_size-ml, body {
   min-height: 100%;
 }
 
@@ -72,22 +76,22 @@ img {
 /* LAYOUT */
 
 /* container */
-.cl {
+.container-large {
   max-width: 100%;
 }
 
-.cm {
+.container {
   max-width: 980px;
 }
 
-.cs {
+.container-small {
   max-width: 700px;
 }
 
-.cl, .cm, .cs {
+.container-large, .container, .container-small {
   margin: 0 auto;
   width: 100%;
-  padding: $m;
+  padding: $margin-m;
 
   &:after {
     content: "";
@@ -101,7 +105,7 @@ img {
   display: flex;
   flex-direction: row;
   padding: 0;
-  margin-bottom: $m;
+  margin-bottom: $margin-m;
 
   > h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
@@ -111,18 +115,18 @@ img {
   > div {
     flex: 1 0 0;
     margin: 0;
-    padding: $m $m 0 $m;
+    padding: $margin-m $margin-m 0 $margin-m;
   }
 
-  .g2 {
+  .cols-2 {
     flex: 2 0 0;
   }
 
-  .g3 {
+  .cols-3 {
     flex: 3 0 0;
   }
 
-  .g4 {
+  .cols-4 {
     flex: 4 0 0;
   }
 }
@@ -130,59 +134,59 @@ img {
 /* DEFAULTS */
 
 body {
-  color: $fnormal;
-  font-family: $copy;
+  color: $font_color-normal;
+  font-family: $font-copy;
   font-size: 16px;
-  line-height: $normal;
+  line-height: $line_height-m;
 }
 
 h1, h2, h3, h4 {
-  font-family: $headline;
-  line-height: $narrow;
-  padding-top: $m;
-  margin-bottom: $m;
+  font-family: $font-headline;
+  line-height: $line_height-s;
+  padding-top: $margin-m;
+  margin-bottom: $margin-m;
 }
 
 h5, h6 {
-  margin-bottom: $s;
+  margin-bottom: $margin-s;
 }
 
 h1 {
-  font-size: $fxxl;
+  font-size: $font_size-xxl;
   font-weight: 700;
 }
 
 h2 {
-  color: $brandmain;
-  font-size: $fxl;
+  color: $brand_color-main;
+  font-size: $font_size-xl;
 }
 
 h3 {
-  font-size: $fl;
+  font-size: $font_size-l;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 h4 {
-  font-size: $fl;
+  font-size: $font_size-l;
   font-weight: 700;
 }
 
 h5 {
-  font-size: $fm;
+  font-size: $font_size-m;
   font-weight: 900;
 }
 
 h6 {
-  font-size: $fm;
+  font-size: $font_size-m;
   font-weight: 700;
   font-style: italic;
 }
 
 p {
-  font-size: $fm;
-  line-height: $wide;
-  margin-bottom: $m;
+  font-size: $font_size-m;
+  line-height: $line_height-l;
+  margin-bottom: $margin-m;
 }
 
 strong {
@@ -200,28 +204,28 @@ strong em, em strong {
 
 blockquote {
   display: flex;
-  border-left: 2px solid $brandmain;
-  margin: $s 0 $m 0;
+  border-left: 2px solid $brand_color-main;
+  margin: $margin-s 0 $margin-m 0;
 
   p {
-    font-family: $code;
-    font-size: $fm;
-    line-height: $normal;
-    padding: $m;
+    font-family: $font-code;
+    font-size: $font_size-m;
+    line-height: $line_height-m;
+    padding: $margin-m;
     margin: 0;
   }
 }
 
 hr {
-  border-bottom: 2px solid $falt;
-  margin: $l;
+  border-bottom: 2px solid $font_color-alternative;
+  margin: $margin-l;
 }
 
 ul, ol {
-  font-size: $fm;
-  line-height: $normal;
-  padding: 0 0 $m $s;
-  margin-bottom: $m;
+  font-size: $font_size-m;
+  line-height: $line_height-m;
+  padding: 0 0 $margin-m $margin-s;
+  margin-bottom: $margin-m;
   list-style: none;
   display: table;
 
@@ -229,14 +233,14 @@ ul, ol {
     display: table-row;
 
     & + li:before {
-      padding-top: $s;
+      padding-top: $margin-s;
     }
   }
 }
 
 ul li:before {
   content: "•";
-  padding-right: $s;
+  padding-right: $margin-s;
   display: table-cell;
 }
 
@@ -249,75 +253,75 @@ ol {
     &:before {
       text-align: right;
       content: counter(ol-counter);
-      font-family: $copy;
-      font-size: $fs;
+      font-family: $font-copy;
+      font-size: $font_size-s;
       font-weight: 600;
-      padding-right: $m;
+      padding-right: $margin-m;
       display: table-cell;
     }
   }
 }
 
 table {
-  font-size: $fs;
-  font-family: $copy;
-  line-height: $normal;
+  font-size: $font_size-s;
+  font-family: $font-copy;
+  line-height: $line_height-m;
   text-align: left;
   border-collapse: collapse;
-  border-top: 1px solid $falt;
-  border-bottom: 1px solid $falt;
-  margin-bottom: $m;
+  border-top: 1px solid $font_color-alternative;
+  border-bottom: 1px solid $font_color-alternative;
+  margin-bottom: $margin-m;
 
   th {
-    padding: $m $s $m $s;
+    padding: $margin-m $margin-s $margin-m $margin-s;
     font-weight: 700;
-    border-bottom: 1px solid $falt;
+    border-bottom: 1px solid $font_color-alternative;
     vertical-align: top;
   }
 
   td {
-    padding: $s;
+    padding: $margin-s;
     vertical-align: top;
   }
 }
 
 code {
-  color: $fnormal;
-  font-family: $code;
-  padding: 0 $s 0 $s;
-  background-color: $bgalt;
+  color: $font_color-normal;
+  font-family: $font-code;
+  padding: 0 $margin-s 0 $margin-s;
+  background-color: $background_color-alternative;
   border-radius: 3px;
 }
 
 pre code {
-  padding: $s;
-  border: 1px solid $falt;
+  padding: $margin-s;
+  border: 1px solid $font_color-alternative;
   display: block;
-  margin-bottom: $m;
+  margin-bottom: $margin-m;
   text-align: left;
   overflow-x: auto;
 }
 
 form {
-  margin-bottom: $m;
+  margin-bottom: $margin-m;
 }
 
 label {
-  font-size: $fs;
-  line-height: $normal;
-  margin: $s 0 $s $s;
+  font-size: $font_size-s;
+  line-height: $line_height-m;
+  margin: $margin-s 0 $margin-s $margin-s;
   display: flex;
 }
 
 select, textarea, input[type=text], input[type=submit], button {
-  color: $fnormal;
-  font-size: $fs;
+  color: $font_color-normal;
+  font-size: $font_size-s;
   font-weight: 600;
-  line-height: $normal;
-  padding: $s;
-  margin-bottom: $s;
-  background-color: $bgnormal;
-  border: 1px solid $falt;
+  line-height: $line_height-m;
+  padding: $margin-s;
+  margin-bottom: $margin-s;
+  background-color: $background_color-normal;
+  border: 1px solid $font_color-alternative;
   border-radius: 3px;
 }
 
@@ -326,23 +330,24 @@ textarea, input[type=text] {
 }
 
 input[type=checkbox], input[type=radio] {
-  margin-right: $s;
+  margin-right: $margin-s;
   margin-top: 3px;
 }
 
 input[type=submit], button {
   text-transform: uppercase;
-  background-color: $bgalt;
+  background-color: $background_color-alternative;
+  border: none;
   display: block;
 }
 
 input[type=submit]:hover, button:hover {
-  color: $finv;
-  background-color: $bginv;
+  color: $font_color-inverted;
+  background-color: $background_color-inverted;
 }
 
 img {
-  margin: 0 auto $m auto;
+  margin: 0 auto $margin-m auto;
 }
 
 a {
@@ -351,37 +356,46 @@ a {
   border-bottom: 1px solid currentColor;
 
   &:hover {
-    border-bottom: 1px solid $brandmain;
+    border-bottom: 1px solid $brand_color-main;
   }
 }
 
 /* SPECIAL */
 
 /* font colors */
-.fnormal {
-  color: $fnormal;
+.font_color-normal {
+  color: $font_color-normal;
 }
 
-.falt {
-  color: $falt;
+.font_color-alternative {
+  color: $font_color-alternative;
 }
 
-.finv {
-  color: $finv;
+.font_color-inverted {
+  color: $font_color-inverted;
 }
 
 /* background-colors */
-.bgnormal {
-  background-color: $bgnormal;
+.background_color-normal {
+  background-color: $background_color-normal;
 }
 
-.bgalt {
-  background-color: $bgalt;
+.background_color-alternative {
+  background-color: $background_color-alternative;
 }
 
-.bginv {
-  color: $finv;
-  background-color: $bginv;
+.background_color-inverted {
+  color: $font_color-inverted;
+  background-color: $background_color-inverted;
+}
+
+.brandmain {
+  color: $font_color-inverted;
+  background-color: $brand_color-main;
+}
+
+.brandalt {
+  background-color: $brand_color-alternative;
 }
 
 /* alignment */
@@ -400,64 +414,65 @@ a {
 }
 
 /* paragraphs */
-.ts {
-  font-size: $fs;
+.font_size-s {
+  font-size: $font_size-s;
 }
 
-.tm {
-  font-size: $fm;
+.font_size-m {
+  font-size: $font_size-m;
 }
 
-.tl {
-  font-size: $fl;
+.font_size-l {
+  font-size: $font_size-l;
 }
 
-.txl {
-  font-size: $fxl;
-  line-height: $normal;
+.font_size-xl {
+  font-size: $font_size-xl;
+  line-height: $line_height-m;
 }
 
-.txxl {
-  font-size: $fxxl;
-  line-height: $normal;
+.font_size-xxl {
+  font-size: $font_size-xxl;
+  line-height: $line_height-m;
 }
 
 /* buttons */
-.primary, .secondary, .tertiary {
-  font-size: $fs;
+.button, .button-secondary, .button-tertiary {
+  font-size: $font_size-s;
   font-weight: 600;
-  line-height: $normal;
-  padding: $s;
-  margin-bottom: $s;
+  line-height: $line_height-m;
+  padding: $margin-s;
+  margin-bottom: $margin-s;
   border: none;
   border-radius: 3px;
   text-transform: uppercase;
   display: table;
 
   &:hover {
-    color: $finv;
-    background-color: $bginv;
+    border: none;
+    color: $font_color-inverted;
+    background-color: $background_color-inverted;
   }
 }
 
-.primary {
-  background-color: $brandmain;
-  color: $finv;
+.button {
+  background-color: $brand_color-main;
+  color: $font_color-inverted;
 }
 
-.secondary {
-  background-color: $bgalt;
-  color: $fnormal;
+.button-secondary {
+  background-color: $background_color-alternative;
+  color: $font_color-normal;
 }
 
 /* ELEMENTS */
 
-/* article */
-.article {
+/* articontainer-largee */
+.articontainer-largee {
   display: flex;
   flex-direction: row;
   padding: 0;
-  margin-bottom: $m;
+  margin-bottom: $margin-m;
 
   > h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
@@ -469,10 +484,10 @@ a {
   }
 
   > div:last-child {
-    padding: 0 0 0 $m;
+    padding: 0 0 0 $margin-m;
   }
 
-  &.atop {
+  &.article-top {
     flex-direction: column;
 
     > div:last-child {
@@ -480,11 +495,11 @@ a {
     }
   }
 
-  &.aright {
+  &.article-right {
     flex-direction: row-reverse;
 
     > div:last-child {
-      padding: 0 $m 0 0;
+      padding: 0 $margin-m 0 0;
     }
   }
 }
@@ -495,11 +510,11 @@ a {
   flex-direction: column;
   flex-wrap: wrap;
   list-style: none;
-  margin: $m 0 $m 0;
+  margin: $margin-m 0 $margin-m 0;
   overflow-x: hidden;
   padding: 0;
 
-  &.nh {
+  &.navigation-horizontal {
     flex-direction: row;
   }
 
@@ -513,13 +528,13 @@ a {
       border-radius: 3px;
       display: block;
       font-weight: 700;
-      line-height: $narrow;
-      padding: $s;
+      line-height: $line_height-s;
+      padding: $margin-s;
       word-wrap: break-word;
 
       &:hover {
-        background-color: $brandmain;
-        color: $finv;
+        background-color: $brand_color-main;
+        color: $font_color-inverted;
       }
     }
   }

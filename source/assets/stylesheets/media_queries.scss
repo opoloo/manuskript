@@ -1,0 +1,64 @@
+@media screen and (max-width: 1000px) {
+  .cm {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .cs {
+    max-width: 100%;
+  }
+
+  .grid {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html, body {
+    font-size: 14px;
+  }
+
+  hr {
+    margin: $m;
+  }
+
+  ul, ol {
+    padding: 0 0 $m 0;
+  }
+
+  blockquote {
+    p {
+      padding: $s $m $s $m;
+    }
+  }
+
+  select {
+    width: 100%;
+  }
+
+  input[type=submit], button {
+    width: 100%;
+    text-align: center;
+  }
+
+  input[type=submit]:hover, button:hover {
+    width: 100%;
+    text-align: center;
+  }
+
+  .primary, .secondary, .tertiary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .article {
+    flex-direction: column;
+
+    &.aright {
+      flex-direction: column;
+    }
+  }
+}

@@ -116,6 +116,7 @@ img {
     flex: 1 0 0;
     margin: 0;
     padding: $margin-m $margin-m 0 $margin-m;
+    min-width: 0;
   }
 
   .cols-2 {

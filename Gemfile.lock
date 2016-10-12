@@ -193,6 +193,3 @@ DEPENDENCIES
   middleman-sprockets
   tzinfo-data
   wdm (~> 0.1.0)
-
-BUNDLED WITH
-   1.13.2

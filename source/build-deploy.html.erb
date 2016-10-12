@@ -1,0 +1,37 @@
+---
+title: Manuskript 0.1
+---
+
+<div class="container-s">
+  <img src="assets/images/ill-gear.png" alt="" />
+  <h1>Build &amp; Deploy</h1>
+  <p class="font_size-l">
+    After you have your first complete prototype and you’re ready to share it with someone, you can have Manuskript build a static version of your website that runs in anyone’s browser, or deploy it directly to your server. Here’s how to do this.
+  </p>
+  <h2>Compile static website</h2>
+  <p>
+    In your project directory, enter</p>
+  <p><code>
+    middleman build
+  </code></p>
+    <p>Find the compiled result in the <em>/build/</em> directory.</p>
+  </p>
+
+  <h2>Deploy</h2>
+  <p>
+    A deploy is a running version of your prototype. Add your publickey to the <em>~/.ssh/authorized_keys</em> file on the server if you want to be able to connect via pubkey authentication.</p>
+  <h4>Deploy staging</h4>
+  <p><code>
+    cap staging deploy
+  </code></p>
+
+  <h4>Deploy production</h4>
+  <p><code>
+    cap production deploy
+  </code></p>
+
+  <h4>Rollback to previous release</h4>
+  <p><code>
+    cap [production|staging] deploy:rollback
+  </code></p>
+</div>

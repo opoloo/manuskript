@@ -10,17 +10,17 @@
 
 /* font-colors */
 $font_color-normal: #222233;
-$font_color-alternative: #9999aa;
-$font_color-inverted: #ffffff;
+$font_color-alt: #9999aa;
+$font_color-inv: #ffffff;
 
 /* background-colors */
-$background_color-normal: #ffffff;
-$background_color-alternative: #e6e6ea;
-$background_color-inverted: #222233;
+$bg_color-normal: #ffffff;
+$bg_color-alt: #e6e6ea;
+$bg_color-inv: #222233;
 
 /* brand-colors */
 $brand_color-main: #0065ff;
-$brand_color-alternative: #f3ffff;
+$brand_color-alt: #f3ffff;
 
 /* font-families */
 $font-headline: "Kreon", sans-serif;
@@ -61,7 +61,7 @@ $margin-xl: 80px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  //border: 1px dotted font_color-alternative
+  //border: 1px dotted font_color-alt
 }
 
 hfont_size-ml, body {
@@ -218,7 +218,7 @@ blockquote {
 }
 
 hr {
-  border-bottom: 2px solid $font_color-alternative;
+  border-bottom: 2px solid $font_color-alt;
   margin: $margin-l;
 }
 
@@ -269,14 +269,14 @@ table {
   line-height: $line_height-m;
   text-align: left;
   border-collapse: collapse;
-  border-top: 1px solid $font_color-alternative;
-  border-bottom: 1px solid $font_color-alternative;
+  border-top: 1px solid $font_color-alt;
+  border-bottom: 1px solid $font_color-alt;
   margin-bottom: $margin-m;
 
   th {
     padding: $margin-m $margin-s $margin-m $margin-s;
     font-weight: 700;
-    border-bottom: 1px solid $font_color-alternative;
+    border-bottom: 1px solid $font_color-alt;
     vertical-align: top;
   }
 
@@ -290,13 +290,13 @@ code {
   color: $font_color-normal;
   font-family: $font-code;
   padding: 0 $margin-s 0 $margin-s;
-  background-color: $background_color-alternative;
+  background-color: $bg_color-alt;
   border-radius: 3px;
 }
 
 pre code {
   padding: $margin-s;
-  border: 1px solid $font_color-alternative;
+  border: 1px solid $font_color-alt;
   display: block;
   margin-bottom: $margin-m;
   text-align: left;
@@ -321,8 +321,8 @@ select, textarea, input[type=text], input[type=submit], button {
   line-height: $line_height-m;
   padding: $margin-s;
   margin-bottom: $margin-s;
-  background-color: $background_color-normal;
-  border: 1px solid $font_color-alternative;
+  background-color: $bg_color-normal;
+  border: 1px solid $font_color-alt;
   border-radius: 3px;
 }
 
@@ -337,14 +337,14 @@ input[type=checkbox], input[type=radio] {
 
 input[type=submit], button {
   text-transform: uppercase;
-  background-color: $background_color-alternative;
+  background-color: $bg_color-alt;
   border: none;
   display: block;
 }
 
 input[type=submit]:hover, button:hover {
-  color: $font_color-inverted;
-  background-color: $background_color-inverted;
+  color: $font_color-inv;
+  background-color: $bg_color-inv;
 }
 
 img {
@@ -368,35 +368,35 @@ a {
   color: $font_color-normal;
 }
 
-.font_color-alternative {
-  color: $font_color-alternative;
+.font_color-alt {
+  color: $font_color-alt;
 }
 
-.font_color-inverted {
-  color: $font_color-inverted;
+.font_color-inv {
+  color: $font_color-inv;
 }
 
 /* background-colors */
-.background_color-normal {
-  background-color: $background_color-normal;
+.bg_color-normal {
+  background-color: $bg_color-normal;
 }
 
-.background_color-alternative {
-  background-color: $background_color-alternative;
+.bg_color-alt {
+  background-color: $bg_color-alt;
 }
 
-.background_color-inverted {
-  color: $font_color-inverted;
-  background-color: $background_color-inverted;
+.bg_color-inv {
+  color: $font_color-inv;
+  background-color: $bg_color-inv;
 }
 
 .brandmain {
-  color: $font_color-inverted;
+  color: $font_color-inv;
   background-color: $brand_color-main;
 }
 
 .brandalt {
-  background-color: $brand_color-alternative;
+  background-color: $brand_color-alt;
 }
 
 /* alignment */
@@ -438,7 +438,8 @@ a {
 }
 
 /* buttons */
-.button, .button-secondary, .button-tertiary {
+.button, .button-secondary, .button-tertiary,
+.btn, .btn-secondary, .btn-tertiary {
   font-size: $font_size-s;
   font-weight: 600;
   line-height: $line_height-m;
@@ -451,18 +452,18 @@ a {
 
   &:hover {
     border: none;
-    color: $font_color-inverted;
-    background-color: $background_color-inverted;
+    color: $font_color-inv;
+    background-color: $bg_color-inv;
   }
 }
 
-.button {
+.button, .btn {
   background-color: $brand_color-main;
-  color: $font_color-inverted;
+  color: $font_color-inv;
 }
 
-.button-secondary {
-  background-color: $background_color-alternative;
+.button-secondary, .btn-secondary {
+  background-color: $bg_color-alt;
   color: $font_color-normal;
 }
 
@@ -506,7 +507,7 @@ a {
 }
 
 /* navigation */
-.navigation {
+.navigation, .nav {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -515,7 +516,7 @@ a {
   overflow-x: hidden;
   padding: 0;
 
-  &.navigation-horizontal {
+  &.navigation-horizontal, &.nav-horizontal {
     flex-direction: row;
   }
 
@@ -535,7 +536,7 @@ a {
 
       &:hover {
         background-color: $brand_color-main;
-        color: $font_color-inverted;
+        color: $font_color-inv;
       }
     }
   }
@@ -592,7 +593,8 @@ a {
     text-align: center;
   }
 
-  .button, .button-secondary, .button-tertiary {
+  .button, .button-secondary, .button-tertiary,
+  .btn, .btn-secondary, .btn-tertiary {
     width: 100%;
     text-align: center;
   }

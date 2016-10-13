@@ -11,27 +11,19 @@ title: Manuskript 0.1
   <h2>Compile static website</h2>
   <p>
     In your project directory, enter</p>
-  <p><code>
-    middleman build
-  </code></p>
-    <p>Find the compiled result in the <em>/build/</em> directory.</p>
+  <pre><code>middleman build</code></pre>
+    <p>Find the compiled result in the <code>/build/</code> directory.</p>
   </p>
 
   <h2>Deploy</h2>
   <p>
-    A deploy is a running version of your prototype. Add your publickey to the <em>~/.ssh/authorized_keys</em> file on the server if you want to be able to connect via pubkey authentication.</p>
+    A deploy is a running version of your prototype. Add your publickey to the <code>~/.ssh/authorized_keys</code> file on the server if you want to be able to connect via pubkey authentication.</p>
   <h4>Deploy staging</h4>
-  <p><code>
-    cap staging deploy
-  </code></p>
+  <pre><code>cap staging deploy</code></pre>
 
   <h4>Deploy production</h4>
-  <p><code>
-    cap production deploy
-  </code></p>
+  <pre><code>cap production deploy</code></pre>
 
   <h4>Rollback to previous release</h4>
-  <p><code>
-    cap [production|staging] deploy:rollback
-  </code></p>
+  <pre><code>cap [production|staging] deploy:rollback</code></pre>
 </div>

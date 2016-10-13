@@ -11,20 +11,33 @@
 </head>
 <body class="<%= page_classes %>">
 
-  <div class="container grid">
-    <ul class="nav nav-horizontal right">
-      <li><a href="index.html#start">Get Started</a></li>
-      <li><a href="content.html">Content</a></li>
-      <li><a href="navigation.html">Navigation</a></li>
-      <li><a href="styling.html">Styling</a></li>
-      <li><a href="build-deploy.html">Build &amp; Deploy</a></li>
-      <li><a href="documentation.html">Documentation</a></li>
-    </ul>
+  <div class="container-l bg_color-brand-main grid">
+    <div>
+      <ul class="nav nav-horizontal left">
+        <li class="font_size-l"><a href="index.html">Manuskript</a></li>
+      </ul>
+    </div>
+    <div class="cols-4">
+      <ul class="nav nav-horizontal right">
+        <li><a href="index.html#start">Get Started</a></li>
+        <li><a href="content.html">Content</a></li>
+        <li><a href="navigation.html">Navigation</a></li>
+        <li><a href="styling.html">Styling</a></li>
+        <li><a href="build-deploy.html">Build &amp; Deploy</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+      </ul>
+    </div>
   </div>
 
   <%= yield %>
-  <div class="cl">
-    <a href="#" class="backtotop tertiary center">↑ Back to top</a>
+
+  <div class="container-l bg_color-inv">
+    <a href="#" class="backtotop btn-tertiary center">↑ Back to top</a>
+    <div class="container">
+      <p class="center">
+        Lorem ipsum dolor sit amet.
+      </p>
+    </div>
   </div>
   <%= javascript_include_tag :all %>
 </body>

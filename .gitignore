@@ -23,4 +23,5 @@
 /vendor/bundle/
 
 /log/capistrano.log
+/config/deploy/live.rb
 

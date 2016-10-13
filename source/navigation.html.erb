@@ -6,8 +6,26 @@ title: Manuskript 0.1
   <img src="assets/images/ill-wheel.png" alt="" />
   <h1>Navigation</h1>
   <p class="font_size-l">
-    The navigation is part of your header and lies outside your <code>index.html.erb</code>. That way you don’t have to edit all your pages when you change something in your header. The same goes for your footer. To edit header and footer, find <code>/layouts/layout.erb</code>.</p>
+    Here’s how to add a navigation, add new pages, and edit header and footer of your pages.
+  </p>
+  <p>You can use a frame for the top and the bottom of your pages. Use <code>/layouts/layout.erb</code> to add a header and a footer that are the same on every page, so you don’t have to change them on each page individually. The navigation is only one example where a header comes in handy.</p>
+  <p>In your <code>layout.erb</code>, the <code>yield</code> tag stands for the content of your page. So you insert your header directly above the <code>yield</code> and your footer directly below.</p>
+
+  <h2>Alternative headers and footers</h2>
+  <p>If you want different headers and footers on different pages, that’s also possible. Please refer to the <a href="https://middlemanapp.com/basics/layouts/">Middleman documentation</a>, it’s explained very comprehensibly.</p>
 
   <h2>Adding new pages</h2>
-  <p>To add a new page to your website, just copy the whole <code>index.html.erb</code> and rename it (e.g. <code>/portfolio.html.erb</code>). Build as many pages as you want. Take a look at your subpages locally by just adding <code>/nameofpage.html</code> to your URL, like so: http://ninos-macbook-pro.fritz.box:4567/content.html</p>
+  <p>To add a new page to your website, just copy the whole <code>index.html.erb</code> and rename it (e.g. <code>/portfolio.html.erb</code>). Build as many pages as you want. Take a look at your subpages locally by just adding <code>/nameofpage.html</code> to your URL, like so: localhost:4567/portfolio.</p>
+
+  <h2>Linking Rails style</h2>
+  <p>If you’re familiar with Rails, you can use the Rails style links instead of your <code>a href</code> tag.</p>
+
+  <p>This would be one way to do it: <code>link_to 'My Site', 'http://mysite.com'</code>.</p>
+
+  <p>There are lots of other ways — find them <a href="https://middlemanapp.com/basics/helper_methods/#toc">here</a>.</p>
+</div>
+
+<div class="container-l">
+  <hr>
+  <a href="styling.html" class="btn center">Next up: Styling</a>
 </div>

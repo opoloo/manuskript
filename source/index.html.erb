@@ -3,6 +3,7 @@ title: Manuskript 0.1
 ---
 
 
+
 <div class="container-l bg_color-brand-main">
   <div class="container-s">
     <img src="assets/images/ill-typewriter.png" alt="" />
@@ -10,8 +11,10 @@ title: Manuskript 0.1
     <p class="font_size-l">
       Manuskript helps you create fast responsive prototypes of websites to test structure, content, layout, and style.
     </p>
-    <p>Manuskript is a modular system following atomic design principles. Think bootstrap, but lean, clear, comprehensible. You’re free to use Manuskript as a blueprint for your own websites, just download the source on <a href="https://github.com/opoloo/manuskript">Github</a> or by pressing <code>Ctrl+S</code>.
+    <p>Manuskript is a modular system following atomic design principles. Think bootstrap, but lean, clear, comprehensible. You’re free to use Manuskript as a blueprint for your own websites, just fork or download it at <a href="https://github.com/opoloo/manuskript">Github</a>.
     </p>
+
+<!--
     <h3>Features</h3>
     <ul>
       <li>Automated deployment</li>
@@ -21,11 +24,8 @@ title: Manuskript 0.1
       <li>SASS/SCSS, Coffee and Sprockets support</li>
     </ul>
 
+-->
     <p>Here’s how to <a href="index.html#start">get started</a>.</p>
-
-    <p>
-      Created by <a href="https://www.opoloo.com">Opoloo</a>, <a href="https://www.opoloo.com/de/imprint">imprint</a>.
-    </p>
   </div>
 </div>
 
@@ -37,23 +37,28 @@ title: Manuskript 0.1
   <h1 id="start">Start</h1>
   <h2>Dependencies</h2>
   <p>
-    To work with Manuskript, you need to install <a href="http://rvm.io/">Ruby</a> and <a href="https://github.com/middleman/middleman/blob/master/README.md">Middleman</a>). This can be a pain in the ass if you’re unexperienced — pull through and let the nice people on the interweb help out.
+    To work with Manuskript, you need to install <a href="http://rvm.io/">Ruby</a> and <a href="https://github.com/middleman/middleman/blob/master/README.md">Middleman</a>. This can be a pain in the ass if you’re unexperienced — pull through and let the nice people on the interweb help out.
   </p>
   <h2>Download</h2>
   <p>Fork or download Manuskript at <a href="https://github.com/opoloo/manuskript">GitHub</a>.</p>
 
   <p>After downloading, the project’s folder structure looks like this:</p>
   <ol>
-    <li>config — <em>for the deployment magic</em> — don’t touch that</li>
-    <li>docs — <em>where you document your project, to be build with <a href="http://www.mkdocs.org/">MkDocs</a></em> — touch if you want</li>
-    <li>locales — <em>for multi-language support</em> — touch if you have more than one language in your project</li>
-    <li>source — <em>where you put the real content of your website</em> — touch. Definitely.</li>
+    <li>config — <em>for the deployment magic</em></li>
+    <li>docs — <em>where you document your project, to be build with <a href="http://www.mkdocs.org/">MkDocs</a></em></li>
+    <li>locales — <em>for multi-language support</em></li>
+    <li>source — <em>where you put the real content of your website</em></li>
   </ol>
 
-  <p>The rest of the files are needed to build a deploy (a running version) of the project. They have various, boring dependencies. Ignore those for now.</p>
+  <p>The rest of the files are needed to build a deploy (a running version) of the project. They have various boring dependencies. Ignore those for now.</p>
 
   <h2>Start local server</h2>
-  <p>To work on your website, open your terminal, go into your project’s directory, and start a local server with the command <code>middleman server</code></p>
-  <p>This will start the server and generate a link to your project, like <a href"http://localhost.localdomain:4567">http://localhost.localdomain:4567</a>. Copy this URL into your browser to have a preview of your project.</p>
-  <p>You’re all set up. Now let’s <a href="content.html">add some content</a> to you first site.</p>
+  <p>To work on your website, open your terminal, go into your project’s directory, and start a local server with the command <code>middleman server</code>.</p>
+  <p>This will start the server and generate a link to your project, like <a href="http://localhost:4567">http://localhost:4567</a>. Copy this URL into your browser to have a preview of your project.</p>
+  <p>You’re all set up. Now let’s <a href="content.html">add some content</a> to your first site.</p>
+</div>
+
+<div class="container-l">
+  <hr>
+  <a href="content.html" class="btn center">Next up: Content</a>
 </div>
